@@ -1,0 +1,37 @@
+Übung 2.1
+Reminder: Alle Übungen sollen in einem separaten Ordner abgelegt werden!
+
+Verbindung herstellen
+Erstellen Sie wie immer eine Datei index.php im Ordner dieser Übung und starten Sie dort den PHP Webserver
+
+php -S 0.0.0.0:8000
+Fügen Sie folgenden Code in der Datei ein. Passen Sie den Servernamen, Benutzernamen und Passwort entsprechend Ihrer Umgebung an.
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+$conn = mysqli_connect($servername, $username, $password);
+
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
+Schliessen Sie die Verbindung am Ende der Datei mit mysqli_close($conn);
+
+Queries ausführen
+Fügen Sie folgenden Code an der entsprechenden Stelle ein:
+
+$sql = "<<QUERY HIER EINFÜGEN>>";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  echo $result->num_rows . " Resultate";
+} else {
+  echo "Keine Resultate vorhanden";
+}
+Schreiben Sie ein SQL Query welches alle Kunden (Tabelle customer) ausliest und fügen sie es an der entsprechenden Stelle ein.
+
+$sql = "<<QUERY HIER EINFÜGEN>>"
