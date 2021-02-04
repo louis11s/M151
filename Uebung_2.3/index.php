@@ -8,7 +8,6 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
@@ -22,11 +21,14 @@ if ($result->num_rows > 0) {
 } else {
   echo "Keine Resultate vorhanden";
 }
-mysqli_close($conn);
+$row = mysqli_fetch_array( $northwind, MYSQLI_ASSOC)
 ?>
 <table>
 <tr>
 <td><?= $row['id']; ?></td>
 <td><?= $row['Vorname']; ?></td>
+<td><?= $row['Nachname']; ?></td>
+<td><?= $row['JobTitle']; ?></td>
 </tr>
 </table>
+<? echo "</table>";?>
