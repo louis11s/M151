@@ -18,6 +18,7 @@ class ProductController extends Controller
         return view('detail', ['product' => $products]);
     }
     public function cart(){
+        session(['cart' => []]);
         return view('cart', ['products' => session('cart')]);
     }
     public function cartAdd($id){
