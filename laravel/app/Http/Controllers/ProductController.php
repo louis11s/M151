@@ -17,14 +17,32 @@ class ProductController extends Controller
         
         return view('detail', ['product' => $products]);
     }
-    public function cart(){
-        session(['cart' => []]);
-        return view('cart', ['products' => session('cart')]);
-    }
     public function cartAdd($id){
         if(session('cart') == null){
+            $array = session('cart');
+            array_push($array, $id);
+            session(['cart' => $array]);
+        }else{
             session(['cart' => []]);
         }
-        array_push(session('cart'), \App\Models\Product::find($id));
+    }
+    public function cartOpen(){
+        $products = \App\Models\Product::all();
+
+        $cartIds = session('cart');
+        $cartProducts = [];
+
+        foreach($cartIds as $cartId){
+            foreach($products as $product){
+                if($product->id == $cartId){
+                    array_push($cartProducts, $product);
+                }
+            }
+        }
+
+        return view('cart', ['products' => $cartProducts]);
+    }
+    public function login(){
+        return view('login');
     }
 }

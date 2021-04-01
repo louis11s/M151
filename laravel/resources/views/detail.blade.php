@@ -8,6 +8,9 @@
 </head>
 <body>
     <p>ID {{ $product->id }}</p>
-    <p>Name {{ $product->name }}</p>
+    <p>Name: {{ $product->name }}</p>
+    <p>Preis: {{ $product->price }}</p>
+    <p>Details: {{ $product->text }}</p>
+    <p>Gebrauch: {{ $product->usage }}</p>
 </body>
 </html>

@@ -23,7 +23,12 @@ class CreateProductsTable extends Migration
             $table->integer('price');
         });
         DB::table('products')->insert([
-            ['name' => 'Blumentopf', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Luft machen', 'image' => 'Blumentopf', ],
+            ['name' => 'Blumentopf', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
+            ['name' => 'Gartenschlauch', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
+            ['name' => 'Erde', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
+            ['name' => 'Samen', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
+            ['name' => 'Tulpen', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
+            ['name' => 'Gartenhandschuhe', 'price' => 29.3, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'Blumentopf', ],
         ]);
     }
 
