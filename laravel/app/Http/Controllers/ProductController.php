@@ -18,7 +18,7 @@ class ProductController extends Controller
         return view('detail', ['product' => $products]);
     }
     public function cartAdd($id){
-        if(session('cart') == null){
+        if(session('cart') !== null){
             $array = session('cart');
             array_push($array, $id);
             session(['cart' => $array]);

@@ -12,5 +12,6 @@
     <p>Preis: {{ $product->price }}</p>
     <p>Details: {{ $product->text }}</p>
     <p>Gebrauch: {{ $product->usage }}</p>
+    <p> <img src="{{$product->image}}" width="50%"/></p>
 </body>
 </html>
