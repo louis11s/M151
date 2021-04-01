@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('text');
             $table->string('image');
             $table->string('usage');
-            $table->integer('price');
+            $table->decimal('price');
         });
         DB::table('products')->insert([
             ['name' => 'Blumentopf', 'price' => 29.30, 'text' => 'Ist ein guter Topf', 'usage' => 'Kann Blumen usw halten', 'image' => 'https://www.bauhaus.ch/product-images/65/51/23206551/1609377_23206551-696x696.jpg', ],

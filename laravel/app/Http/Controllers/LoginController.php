@@ -11,6 +11,7 @@ class LoginController extends Controller
         foreach($users as $user){
             if($user->email == $request->i_email && password_verify($request->i_password, $user->password)){
                 echo 'yes';
+                return redirect('/products');
                 break;
             }else{
                 echo 'no';
